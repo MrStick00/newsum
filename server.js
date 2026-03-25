@@ -296,6 +296,6 @@ app.get("/publico/article", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Proxy running at http://localhost:${PORT}`);
+app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
+  console.log("Proxy running");
 });
